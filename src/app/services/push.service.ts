@@ -37,6 +37,14 @@ export class PushService {
    }
 
    notificacionRecibida( noti:OSNotification ){
+     const payload = noti.payload;
+     const existePush = this.mensajes.find( mensaje => mensaje.notificationID === payload.notificationID);
+
+     if(existePush){
+       return;
+
+      this.mensajes.unshift( payload );
+     }
 
    }
  }
