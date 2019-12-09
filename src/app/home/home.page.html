@@ -1,7 +1,7 @@
 <ion-header no-border>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      App Push
+      Bandeja de entrada
     </ion-title>
 
     <ion-buttons slot="end">
@@ -16,6 +16,8 @@
 
 <ion-content>
 
+   <ion-img class="img" src="/assets/images/mensajeicon.png"></ion-img>
+
   <ion-list>
 
     <ion-list-header>
@@ -26,9 +28,14 @@
       <ion-label> {{ pushService.userId }} </ion-label>
     </ion-item>
 
-    <ion-list-header>
-      <ion-label>Pushes</ion-label>
-    </ion-list-header>
+    <ion-card color="dark">
+  <ion-card-header>
+    <ion-card-subtitle></ion-card-subtitle>
+    <ion-card-title>Mensajes</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>  </ion-card-content>
+</ion-card>
 
     <ion-item *ngFor="let push of mensajes">
       <ion-label>
